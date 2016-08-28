@@ -77,11 +77,16 @@ function reSize() {
   }
     
   $('.send').click(function(){
+	if(windowObjectReference == null || windowObjectReference.closed){
      var subject = encodeURI($('#subject').val());
      var name = encodeURI($('#name').val());
      var body = encodeURI($('#body').val());
      var href = 'mailto:'+mail+'?subject='+name+': '+subject+'&body='+body;
-	 window.open(href,'_blank');
+     var windowObjectReference = window.open(href,'_blank', "resizable,scrollbars,status");
+	}
+	else{
+     windowObjectReference.focus();
+	};
   });
   
   $('.reset').click(function(){
