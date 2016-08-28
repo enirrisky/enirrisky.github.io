@@ -77,23 +77,11 @@ function reSize() {
   }
     
   $('.send').click(function(){
-     var name = $('#name').val();
-     var mail = $('#mail').val();
-     var comment = $('#comment').val();
-     var dataString = 'name='+name+'&mail='+mail+'&comment='+comment;
-         dataString = dataString.toString();
-     $.ajax({
-        type: "POST",
-        url: 'http://www.sirrineresume.co.nf/email.php',
-        data: dataString,
-        success: function(err, dataString){
-          if(err){
-            $('#response').html(err.message);
-            return;
-          }
-          $('#response').html(dataString);
-        }
-     });
+     var subject = encodeURI($('#subject').val());
+     var name = encodeURI($('#name').val());
+     var body = encodeURI($('#body').val());
+     var href = 'mailto:'+mail+'?subject='+name+': '+subject+'&body='+body;
+	 window.open(href,'_blank');
   });
   
   $('.reset').click(function(){
