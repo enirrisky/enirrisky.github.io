@@ -1,6 +1,8 @@
+var windowObjectReference = null;
+
 $(function($) {
   $(window).resize(reSize);
-
+  
   //large
   $('.slider-for').slick({
     slidesToShow: 1,
@@ -39,6 +41,29 @@ $(function($) {
     window.open($(this).data('url'));
   });
   
+  //EMAIL FUNCTION
+  $('.send').click(function(){
+	if(windowObjectReference == null || windowObjectReference.closed){
+     var subject = encodeURI($('#subject').val());
+     var name = encodeURI($('#name').val());
+     var body = encodeURI($('#body').val());
+     var href = 'mailto:sirrineprogramming@gmail.com?subject='+name+': '+subject+'&body='+body;
+     windowObjectReference = window.open(href,'_blank');
+	 console.log(windowObjectReference);
+	}
+	else{
+     windowObjectReference.focus();
+	};
+  });
+  
+  $('.reset').click(function(){
+    $("#name").val('');
+    $("#mail").val('');
+    $("#comment").val('');
+    $('#response').html('');
+	windowObjectReference = null;
+  });
+  
     reSize();
 });
   
@@ -75,25 +100,5 @@ function reSize() {
     $('.largeScreen').hide();
     $('.smallScreen').show();
   }
-    
-  $('.send').click(function(){
-	if(windowObjectReference == null || windowObjectReference.closed){
-     var subject = encodeURI($('#subject').val());
-     var name = encodeURI($('#name').val());
-     var body = encodeURI($('#body').val());
-     var href = 'mailto:'+mail+'?subject='+name+': '+subject+'&body='+body;
-     var windowObjectReference = window.open(href,'_blank', "resizable,scrollbars,status");
-	}
-	else{
-     windowObjectReference.focus();
-	};
-  });
-  
-  $('.reset').click(function(){
-    $("#name").val('');
-    $("#mail").val('');
-    $("#comment").val('');
-    $('#response').html('');
-  })
       
 }
