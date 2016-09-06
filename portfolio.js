@@ -49,7 +49,6 @@ $(function($) {
      var body = encodeURI($('#body').val());
      var href = 'mailto:sirrineprogramming@gmail.com?subject='+name+': '+subject+'&body='+body;
      windowObjectReference = window.open(href,'_blank');
-	 console.log(windowObjectReference);
 	}
 	else{
      windowObjectReference.focus();
@@ -104,10 +103,8 @@ function reSize() {
 }
 
 var offset = $('.dropdown').offset();
-console.log('dropdown offset: '+offset);
 $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
-	console.log(scrollTop);
 	if(scrollTop >= 50){
 		$('.dropdown').css({
 			'position':'fixed',
@@ -118,7 +115,7 @@ $(window).on('scroll', function() {
 		'<li><a href="#Top">Top</a></li>'+
         '<li><a href="#Programs">Programs</a></li>'+
         '<li><a href="#Bio">Bio</a></li>'+
-        '<li><a href="#Contact">Contact</a></li>';
+        '<li><a href="#Contact">Contact</a></li>'
 		);
 	}
 	else{
@@ -128,7 +125,7 @@ $(window).on('scroll', function() {
 		$('.dropdown-menu').html(
         '<li><a href="#Programs">Programs</a></li>'+
         '<li><a href="#Bio">Bio</a></li>'+
-        '<li><a href="#Contact">Contact</a></li>';
+        '<li><a href="#Contact">Contact</a></li>'
 		);
 	}
 	
