@@ -14,9 +14,7 @@ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkz
 <link type="text/css" rel="stylesheet" href="portfolio.css"/>
 
 </head>
-<body>
-<a name="up"></a><br>          
-<a href="#up" id="top">top &uarr;</a>
+<body>    
 <div class="containment">
   <div class="header">
     <div class="headTitle">
@@ -31,10 +29,10 @@ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkz
      </button>
 
       <ul class="dropdown-menu">
+		<li><a href="#Top">Top</a></li>
         <li><a href="#Programs">Programs</a></li>
         <li><a href="#Bio">Bio</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li><a href="#Links">Links</a></li>
       </ul>
     </div>
   </div>
@@ -310,9 +308,8 @@ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkz
   <!--words-->
   <div id="biowords">
     <div id="bioimage"></div>
-    <h1>Bio</h1> I grew up in suburban Minnesota and live on Camano Island, WA north
-    of Seatle where I spend my days studying online at Brigham Young University Idaho to get a bachelors degree in software engineering. I love Programming and getting to see projects come to life. FreeCodeCamp has taught me a lot and I'm learning more
-    by engaging in the local community of programmers.
+    <h1>Bio</h1> I grew up in Minnesota and live on Camano Island, WA with my wife Rochelle.
+	I'm studying online for a bachelors degree in software engineering through Brigham Young University Idaho. I love Programming and getting to see projects come to life. My education has been of great value to me and I've multiplied it's worth through personal study.
   </div>
 </div>
 
@@ -320,18 +317,18 @@ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkz
 
 <div class="contact">
   <h1>Contact</h1><span id="response"></span>
-  <form>
+  <form action="https://formspree.io/sirrineprogramming@gmail.com">
     <div class="form-group row">
       <div class="col-sm-6">
-        <input type="text" class="form-control" id="subject" placeholder="subject">
+        <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
       </div>
       <div class="col-sm-6">
-        <input type="text" class="form-control" id="name" placeholder="name">
+        <input type="text" class="form-control" name="name" id="name" placeholder="name">
       </div>
     </div>
     <div class="form-group row">
       <div class="col-xs-12">
-        <textarea class="form-control comment" name="body" rows="4" id="body" placeholder="your message"></textarea>
+        <textarea class="form-control comment" name="body" id="body" placeholder="your message" rows="4"></textarea>
       </div>
     </div>
     <input class="btn btn-sm send" value="Send">

@@ -57,9 +57,9 @@ $(function($) {
   });
   
   $('.reset').click(function(){
+    $("#subject").val('');
     $("#name").val('');
-    $("#mail").val('');
-    $("#comment").val('');
+    $("#body").val('');
     $('#response').html('');
 	windowObjectReference = null;
   });
@@ -102,3 +102,43 @@ function reSize() {
   }
       
 }
+
+var offset = $('.dropdown').offset();
+console.log('dropdown offset: '+offset);
+$(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+	console.log(scrollTop);
+	if(scrollTop >= 50){
+		$('.dropdown').css({
+			'position':'fixed',
+			'top':'0em',
+			'right':'0em'
+		});
+		$('.dropdown-menu').html(
+		'<li><a href="#Top">Top</a></li>'+
+        '<li><a href="#Programs">Programs</a></li>'+
+        '<li><a href="#Bio">Bio</a></li>'+
+        '<li><a href="#Contact">Contact</a></li>';
+		);
+	}
+	else{
+		$('.dropdown').css({
+			'position':'static'
+		});
+		$('.dropdown-menu').html(
+        '<li><a href="#Programs">Programs</a></li>'+
+        '<li><a href="#Bio">Bio</a></li>'+
+        '<li><a href="#Contact">Contact</a></li>';
+		);
+	}
+	
+	/*
+    $('.background1, .background2').each(function() {
+        var topDistance = $(this).offset().top;
+
+        if ( (topDistance+100) < scrollTop ) {
+            alert( $(this).text() + ' was scrolled to the top' );
+        }
+    });
+	*/
+});

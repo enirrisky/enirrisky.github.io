@@ -43,7 +43,9 @@ body {
 }
 
 .dropdown {
+  position: static;
   float: right;
+  transition: position 2s;
 }
 
 .dropdown-menu {
