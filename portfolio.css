@@ -155,11 +155,16 @@ body {
   margin: 1rem;
   float: right;
   border-radius: 50%;
-  border-radius: 50%;
+  box-shadow:2px 2px 2px grey,
+			-2px -2px 2px grey,
+			2px -2px 1px white,
+			-3px 3px 3px black;
+			
   -webkit-shape-outside: circle();
   shape-outside: circle();
   background-image: url("http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/portfolioPic_zpsltigo7s1.jpg");
   background-size: cover;
+  transition:all .5s ease-in;
 }
 
 .navbar {
@@ -285,3 +290,4 @@ body {
 .copyright:hover {
   opacity: 1;
 }
+

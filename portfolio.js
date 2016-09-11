@@ -63,9 +63,30 @@ $(function($) {
 	windowObjectReference = null;
   });
   
-    reSize();
+  var handle = setInterval(changePic, 7000);
+ 
+  
+  reSize();
 });
   
+var images = [
+	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/portfolioPic_zpsltigo7s1.jpg",
+	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/profile_zpswvc55ubg.jpg",
+	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/profilevolcom%202_zpsgrwrdthq.jpg",
+	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/taco%20jon_zpsc21leva3.jpg"
+];  
+  
+var picInd = 1;
+function changePic(){
+  $('#bioimage').css({
+	  "background-image":"URL("+images[picInd]+")"
+  });
+  if(picInd >= images.length - 1){
+	  picInd = 0;
+  }else{
+	  picInd++;
+  }
+}  
   
 function reSize() {
   
@@ -111,22 +132,26 @@ $(window).on('scroll', function() {
 			'top':'0em',
 			'right':'0em'
 		});
+		/*
 		$('.dropdown-menu').html(
 		'<li><a href="#Top">Top</a></li>'+
         '<li><a href="#Programs">Programs</a></li>'+
         '<li><a href="#Bio">Bio</a></li>'+
         '<li><a href="#Contact">Contact</a></li>'
 		);
+		*/
 	}
 	else{
 		$('.dropdown').css({
 			'position':'static'
 		});
+		/*
 		$('.dropdown-menu').html(
         '<li><a href="#Programs">Programs</a></li>'+
         '<li><a href="#Bio">Bio</a></li>'+
         '<li><a href="#Contact">Contact</a></li>'
 		);
+		*/
 	}
 	
 	/*
