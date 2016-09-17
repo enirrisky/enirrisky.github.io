@@ -132,26 +132,9 @@ $(window).on('scroll', function() {
 			'top':'0em',
 			'right':'0em'
 		});
-		/*
-		$('.dropdown-menu').html(
-		'<li><a href="#Top">Top</a></li>'+
-        '<li><a href="#Programs">Programs</a></li>'+
-        '<li><a href="#Bio">Bio</a></li>'+
-        '<li><a href="#Contact">Contact</a></li>'
-		);
-		*/
 	}
 	else{
-		$('.dropdown').css({
-			'position':'static'
-		});
-		/*
-		$('.dropdown-menu').html(
-        '<li><a href="#Programs">Programs</a></li>'+
-        '<li><a href="#Bio">Bio</a></li>'+
-        '<li><a href="#Contact">Contact</a></li>'
-		);
-		*/
+		
 	}
 	
 	/*
@@ -164,3 +147,5 @@ $(window).on('scroll', function() {
     });
 	*/
 });
+
+
