@@ -64,11 +64,7 @@ $(function($) {
 	windowObjectReference = null;
   });
   
-  $('.prog-div').on('mouseenter',function(){
-	$('.slick-slide').focus();
-  });
-  
-  var handle = setInterval(changePic, 7000);
+  //var handle = setInterval(changePic, 7000);
  
   
   reSize();
