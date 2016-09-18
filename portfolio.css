@@ -147,6 +147,14 @@ body {
   font-family: raleway;
 }
 
+.slick-slide:focus {
+  border:none;
+  outline:none;
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+}
+
 .displayy:hover {
   cursor: pointer;
 }

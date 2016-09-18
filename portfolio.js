@@ -7,7 +7,8 @@ $(function($) {
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
+	accesability: true,
     fade:true,
     speed:0
   });
@@ -61,6 +62,10 @@ $(function($) {
     $("#body").val('');
     $('#response').html('');
 	windowObjectReference = null;
+  });
+  
+  $('.prog-div').on('mouseenter',function(){
+	$('.slick-slide').focus();
   });
   
   var handle = setInterval(changePic, 7000);
