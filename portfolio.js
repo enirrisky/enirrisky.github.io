@@ -16,11 +16,11 @@ $(function($) {
   $('.slider-forr').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    arrows: false
   });
   
   //SMOOTH SCROLL
- $('a[href*="#"]:not([href="#"])').click(function() {
+ $('.dropdown-menu').on('click','a[href*="#"]:not([href="#"])',function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -109,13 +109,12 @@ function reSize() {
   $('.displayBox').css('height', displayHeight);
   $('.display').css('height', screenHeight);
 
-  
   var width = $('.containment').width();
   if (width >= 977) {
     //Large
     $('.largeScreen').show();
     $('.smallScreen').hide();
-  } else {
+  } else{
     //Small
     $('.largeScreen').hide();
     $('.smallScreen').show();
@@ -123,18 +122,32 @@ function reSize() {
       
 }
 
+var flip = true;
 var offset = $('.dropdown').offset();
 $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
-	if(scrollTop >= 50){
+	if(scrollTop >= 50 && flip){
 		$('.dropdown').css({
 			'position':'fixed',
 			'top':'0em',
 			'right':'0em'
 		});
+		var menu = '<li><a href="#Top">Top</a></li>'+
+		'<li><a href="#Programs">Programs</a></li>'+
+		'<li><a href="#Bio">Bio</a></li>'+
+		'<li><a href="#Contact">Contact</a></li>';
+		$('.dropdown-menu').html(menu);
+		flip = false;
 	}
-	else{
-		
+	else if(scrollTop < 50 && !flip){
+		$('.dropdown').css({
+			'position':'relative'
+		})
+		var menu = '<li><a href="#Programs">Programs</a></li>'+
+		'<li><a href="#Bio">Bio</a></li>'+
+		'<li><a href="#Contact">Contact</a></li>';
+		$('.dropdown-menu').html(menu);
+		flip = true;
 	}
 	
 	/*
