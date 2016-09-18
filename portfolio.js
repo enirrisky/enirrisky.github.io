@@ -65,7 +65,8 @@ $(function($) {
   });
   
   //var handle = setInterval(changePic, 7000);
- 
+  changePic();
+  setTimeout(changePic, 1500);
   
   reSize();
 });

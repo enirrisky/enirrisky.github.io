@@ -165,10 +165,10 @@ body {
   margin: 1rem;
   float: right;
   border-radius: 50%;
-  box-shadow:2px 2px 2px grey,
+/*  box-shadow:2px 2px 2px grey,
 			-2px -2px 2px grey,
 			2px -2px 1px white,
-			-3px 3px 3px black;
+			-3px 3px 3px black;*/
 			
   -webkit-shape-outside: circle();
   shape-outside: circle();
