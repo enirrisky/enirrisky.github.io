@@ -72,10 +72,10 @@ $(function($) {
 });
   
 var images = [
-	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/portfolioPic_zpsltigo7s1.jpg",
-	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/profile_zpswvc55ubg.jpg",
-	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/profilevolcom%202_zpsgrwrdthq.jpg",
-	"http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/taco%20jon_zpsc21leva3.jpg"
+	"images/prof1.jpg",
+	"images/prof2.jpg",
+	"images/prof3.jpg",
+	"images/prof4.jpg"
 ];  
   
 var picInd = 1;

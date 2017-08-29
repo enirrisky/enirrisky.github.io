@@ -32,7 +32,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url("http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/portfolioJumoPic_zpshnrprxxl.jpg");
+  background-image: url("images/window.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 200px;
@@ -77,7 +77,7 @@ body {
 }
 
 .displayBox {
-  background-image: url(http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/laptop_zpshhbdikqf.jpg);
+  background-image: url(images/laptop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -95,6 +95,7 @@ body {
   background-size: cover;
   background-position: center;
   font-family: raleway;
+  background-image: url("images/defaultscreen.png");
 }
 
 .display:hover {
@@ -172,7 +173,7 @@ body {
 			
   -webkit-shape-outside: circle();
   shape-outside: circle();
-  background-image: url("http://i1168.photobucket.com/albums/r494/Jonathan_Sirrine/portfolioPic_zpsltigo7s1.jpg");
+  background-image: url("images/prof1.jpg");
   background-size: cover;
   transition:all .5s ease-in;
 }
